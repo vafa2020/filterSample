@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
+  align-items: center;
   flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+.navBar {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 80px;
+  background-color: rgb(228, 228, 228);
+  width: 100%;
 }
-
-.App-link {
-  color: #61dafb;
+.navBar span {
+  background-color: fuchsia;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin: 0 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.productList {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.product {
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ccc;
+  padding: 20px 40px;
+  margin-top: 10px;
+}
+p {
+  margin-right: 10px;
+}
+.btn {
+  text-align: center;
+  cursor: pointer;
+  padding: 10px 20px;
+  width: 70px;
+  border: 2px solid rgb(195, 132, 255);
+  background-color: transparent;
+  margin: 0 10px;
+  border-radius: 8px;
+}
+.boxQty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blueviolet;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 10px 0;
+}
+.qty {
+  color: #fff;
+}
+.boxInput {
+}
+.input {
+  padding: 5px;
+  border-radius: 8px;
 }
