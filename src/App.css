@@ -8,8 +8,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60px;
-  background-color: #8b5cf6;
+  height: 70px;
+  background-color: #c026d3;
   width: 100%;
   color: #fff;
 }
@@ -89,4 +89,18 @@ p {
 }
 .filters {
   width: 200px;
+}
+.label {
+  font-weight: bold;
+  color: #c026d3;
+}
+.searchBox {
+  margin-top: 20px;
+}
+.search {
+  outline: none;
+  border-radius: 5px;
+  border: 3px solid #c026d3;
+  width: 300px;
+  padding: 10px 15px;
 }

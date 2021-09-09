@@ -1,4 +1,5 @@
 import "./App.css";
+import Search from "./common/Search";
 import Filter from "./component/Filter";
 import NavBar from "./component/NavBar";
 import ProductList from "./component/ProductList";
@@ -9,6 +10,7 @@ function App() {
     <div className="app">
       <ProductProvider>
         <NavBar />
+        <Search />
         <Filter />
         <ProductList />
       </ProductProvider>

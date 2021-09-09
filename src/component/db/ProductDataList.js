@@ -23,7 +23,7 @@ export const ProductDataList = [
   },
   {
     id: 3,
-    title: "لپ تاپ samsung مدل 2017",
+    title: "دوربین kodak مدل 2018",
     description: "توضیحات برای متن نمونه می باشد",
     price: 33000000,
     quantity: 1,
@@ -34,7 +34,7 @@ export const ProductDataList = [
   },
   {
     id: 4,
-    title: "لپ تاپ samsung مدل 2020",
+    title: "دوربین canon مدل 2021",
     description: "توضیحات برای متن نمونه می باشد",
     price: 42200000,
     quantity: 1,
@@ -78,7 +78,7 @@ export const ProductDataList = [
   },
   {
     id: 8,
-    title: "لپ تاپ del مدل 2019",
+    title: "ساعت  del مدل 2019",
     description: "توضیحات برای متن نمونه می باشد",
     price: 27000000,
     quantity: 1,
@@ -89,7 +89,7 @@ export const ProductDataList = [
   },
   {
     id: 9,
-    title: "لپ تاپ canon مدل 2020",
+    title: "ساعت canon مدل 2020",
     description: "توضیحات برای متن نمونه می باشد",
     price: 21500000,
     quantity: 1,

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { createContext } from "react";
 import { useReducer } from "react/cjs/react.development";
 import { ProductDataList } from "../component/db/ProductDataList";
+import _ from "lodash";
 
 const productContext = createContext();
 const productContextDispatch = createContext();
@@ -46,15 +47,31 @@ const reducer = (state, action) => {
       return updateProduct;
     }
     case "filterSize": {
-      const updateProduct = [...state];
-      if (!action.value) {
-        return updateProduct;
+      if (action.value === "All") {
+        return ProductDataList;
       }
       const filterProduct = ProductDataList.filter(
         (p) => p.display.indexOf(action.value) !== -1
       );
       return filterProduct;
     }
+    case "filterSort": {
+      const cloneProduct = [...state];
+      if (action.value === "asc") {
+        return _.orderBy(cloneProduct, ["price"], ["desc"]);
+      }
+      return _.orderBy(cloneProduct, ["price"], ["asc"]);
+    }
+    case "searchFilter": {
+      if (!action.value) {
+        return ProductDataList;
+      }
+      const searchProduct = ProductDataList.filter((p) =>
+        p.title.toLowerCase().includes(action.value.toLowerCase())
+      );
+      return searchProduct;
+    }
+
     default:
       return state;
   }
