@@ -45,6 +45,16 @@ const reducer = (state, action) => {
       updateProduct[index] = selectObject;
       return updateProduct;
     }
+    case "filterSize": {
+      const updateProduct = [...state];
+      if (!action.value) {
+        return updateProduct;
+      }
+      const filterProduct = ProductDataList.filter(
+        (p) => p.display.indexOf(action.value) !== -1
+      );
+      return filterProduct;
+    }
     default:
       return state;
   }

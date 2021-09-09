@@ -64,7 +64,7 @@ p {
   background-color: transparent;
   border-radius: 5px;
 }
-.remove{
+.remove {
   border: 1px solid red;
   color: red;
 }
@@ -80,9 +80,13 @@ p {
 .qty {
   color: #c026d3;
 }
-/* .boxInput {
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1000px;
+  margin-top: 10px;
 }
-.input {
-  padding: 5px;
-  border-radius: 8px;
-} */
+.filters {
+  width: 200px;
+}

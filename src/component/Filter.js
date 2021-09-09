@@ -1,21 +1,30 @@
 import { useProductAction } from "../stateManager/ProductProvider";
-import Select from 'react-select';
-
+import Select from "react-select";
+import { useState } from "react";
 
 const options = [
-    { value: 'chocolate', label: 'Chocolate' },
-    { value: 'strawberry', label: 'Strawberry' },
-    { value: 'vanilla', label: 'Vanilla' },
-  ]; 
+  { value: "large", label: "large" },
+  { value: "medium", label: "medium" },
+  { value: "small", label: "small" },
+];
 const Filter = () => {
   const dispatch = useProductAction();
-  return <div className="filter">
-  <Select
-        value={selectedOption}
-        onChange={this.handleChange}
+  const [sizeValue, setSizeValue] = useState();
+  const sizeHandler = (selectOption) => {
+    console.log(selectOption);
+    dispatch({ type: "filterSize", value: selectOption.value });
+    setSizeValue(selectOption);
+  };
+  return (
+    <div className="filter">
+      <Select
+        className="filters"
+        value={sizeValue}
+        onChange={sizeHandler}
         options={options}
       />
-  </div>;
+    </div>
+  );
 };
 
 export default Filter;
