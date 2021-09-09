@@ -2,22 +2,22 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 .navBar {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80px;
-  background-color: rgb(228, 228, 228);
+  height: 60px;
+  background-color: #8b5cf6;
   width: 100%;
+  color: #fff;
 }
 .navBar span {
-  background-color: fuchsia;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+  background-color: #4c1d95;
+  width: 60px;
+  height: 30px;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,40 +35,49 @@
   border-radius: 8px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  border: 2px solid #ccc;
-  padding: 20px 40px;
+  justify-content: space-between;
+  border: 2px solid #a21caf;
+  padding: 20px 30px;
   margin-top: 10px;
+  width: 1000px;
+}
+.product label {
+  color: #4c1d95;
+  font-weight: bold;
 }
 p {
   margin-right: 10px;
 }
+.cource {
+  color: #a21caf;
+}
+.price {
+  color: #a21caf;
+}
+
 .btn {
   text-align: center;
   cursor: pointer;
-  padding: 10px 20px;
-  width: 70px;
-  border: 2px solid rgb(195, 132, 255);
-  background-color: transparent;
-  margin: 0 10px;
-  border-radius: 8px;
+  padding: 5px 10px;
+  border: 1px solid #a21caf;
+  background-color: #c4b5fd;
+  border-radius: 5px;
 }
 .boxQty {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: blueviolet;
-  width: 30px;
-  height: 30px;
+  background-color: #c4b5fd;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
-  margin: 0 10px 0;
 }
 .qty {
-  color: #fff;
+  color: #c026d3;
 }
-.boxInput {
+/* .boxInput {
 }
 .input {
   padding: 5px;
   border-radius: 8px;
-}
+} */

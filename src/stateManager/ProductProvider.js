@@ -15,7 +15,7 @@ const reducer = (state, action) => {
     case "Increment": {
       const index = state.findIndex((p) => p.id === action.value);
       const selectObject = { ...state[index] };
-      selectObject.qty++;
+      selectObject.quantity++;
       const updateProduct = [...state];
       updateProduct[index] = selectObject;
       return updateProduct;
@@ -23,12 +23,12 @@ const reducer = (state, action) => {
     case "decrement": {
       const index = state.findIndex((p) => p.id === action.value);
       const selectObject = { ...state[index] };
-      if (selectObject.qty === 1) {
+      if (selectObject.quantity === 1) {
         console.log(selectObject.qty);
         const filterdProduct = state.filter((p) => p.id !== action.value);
         return filterdProduct;
       }
-      selectObject.qty--;
+      selectObject.quantity--;
       const updateProduct = [...state];
       updateProduct[index] = selectObject;
       return updateProduct;

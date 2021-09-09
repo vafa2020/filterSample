@@ -12,42 +12,27 @@ const Product = ({ data }) => {
       <p className="price">{data.price}</p>
 
       <div className="boxQty">
-        <span className="qty">{data.qty}</span>
-      </div>
-      <div className="boxInput">
-        <input
-          className="input"
-          type="text"
-          onChange={(event) =>
-            dispatch({
-              type: "edit",
-              value: data.id,
-              event: event.target.value,
-            })
-          }
-        />
+        <span className="qty">{data.quantity}</span>
       </div>
 
-      <div className="controler">
-        <button
-          onClick={()=>dispatch({ type: "Increment", value: data.id })}
-          className="btn"
-        >
-          <BsPlus />
-        </button>
-        <button
-          onClick={()=>dispatch({ type: "decrement", value: data.id })}
-          className="btn"
-        >
-          <BsDash />
-        </button>
-        <button
-          onClick={()=>dispatch({ type: "Delete", value: data.id })}
-          className="btn"
-        >
-          Delete
-        </button>
-      </div>
+      <button
+        onClick={() => dispatch({ type: "Increment", value: data.id })}
+        className="btn"
+      >
+        <BsPlus />
+      </button>
+      <button
+        onClick={() => dispatch({ type: "decrement", value: data.id })}
+        className="btn"
+      >
+        <BsDash />
+      </button>
+      <button
+        onClick={() => dispatch({ type: "Delete", value: data.id })}
+        className="btn"
+      >
+        Delete
+      </button>
     </div>
   );
 };

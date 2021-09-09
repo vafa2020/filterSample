@@ -4,7 +4,7 @@ const NavBar = () => {
   const product = useProduct();
   return (
     <div className="navBar">
-      navBar
+      Filter App
       <span>{product.length}</span>
     </div>
   );
