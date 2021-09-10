@@ -55,6 +55,16 @@ const reducer = (state, action) => {
       );
       return filterProduct;
     }
+    case "filterModel": {
+      if (action.value === "All") {
+        return ProductDataList;
+      }
+      const filteredModel = ProductDataList.filter(
+        (p) => p.model === action.value
+      );
+
+      return filteredModel;
+    }
     case "filterSort": {
       const cloneProduct = [...state];
       if (action.value === "asc") {
@@ -64,9 +74,9 @@ const reducer = (state, action) => {
     }
     case "searchFilter": {
       if (!action.value) {
-        return ProductDataList;
+        return state;
       }
-      const searchProduct = ProductDataList.filter((p) =>
+      const searchProduct = state.filter((p) =>
         p.title.toLowerCase().includes(action.value.toLowerCase())
       );
       return searchProduct;

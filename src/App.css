@@ -82,12 +82,19 @@ p {
 }
 .filter {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   width: 1000px;
   margin-top: 10px;
 }
 .filters {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.select {
   width: 200px;
 }
 .label {
